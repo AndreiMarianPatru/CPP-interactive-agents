@@ -32,7 +32,7 @@ int main()
 
 	mygrid->populate_grid();
 	std::vector<BaseEntity*> bb;
-	bb = myastar->GetBananas(*mygrid);
+	bb = myastar->GetObstacles(*mygrid);
 	
 
 
@@ -244,9 +244,9 @@ int main()
 			window.draw(entity->GetSprite(), entity->getTransform());
 		}
 
-		for(auto banana :bb)//draw the obstacles
+		for(auto Obstacle :bb)//draw the obstacles
 		{
-			window.draw(banana->GetSprite(), banana->getTransform());
+			window.draw(Obstacle->GetSprite(), Obstacle->getTransform());
 
 		}
 

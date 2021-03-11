@@ -351,20 +351,20 @@ void Astar::GetRoad(BaseEntity* entity)//create the 2 drawable which will serve 
 	AddTarget(entity);
 }
 
-std::vector<BaseEntity*> Astar::GetBananas(grid mygrid)
+std::vector<BaseEntity*> Astar::GetObstacles(grid mygrid)
 {
-	std::vector<BaseEntity*> bananas;
+	std::vector<BaseEntity*> Obstacles;
 	for (int i = 0; i < gridsize; i++)
 		for (int j = 0; j < gridsize; j++)
 		{if(adjMatr[i][j]==9999)
 		{
-			StaticEntity* banana = new StaticEntity("banana","assets\\banana.png");
-			banana->Initialize();
-			banana->setScale(2, 2);
-			banana->setOrigin(32, 32);
-			banana->setPosition(i * mygrid.tilesize, j * mygrid.tilesize);
-			bananas.push_back(banana);
+			StaticEntity* Obstacle = new StaticEntity("Obstacle","assets\\Obstacle.png");
+			Obstacle->Initialize();
+			Obstacle->setScale(2, 2);
+			Obstacle->setOrigin(20, 20);
+			Obstacle->setPosition(i * mygrid.tilesize, j * mygrid.tilesize);
+			Obstacles.push_back(Obstacle);
 		}						
 		}
-	return bananas;
+	return Obstacles;
 }

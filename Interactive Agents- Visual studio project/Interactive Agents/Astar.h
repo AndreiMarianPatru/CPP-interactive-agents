@@ -44,7 +44,7 @@ class Astar :public grid
 
 		std::vector<StaticEntity*> drawables;
 		std::vector<StaticEntity*> pathtargets;
-	std::vector<StaticEntity*>bananas;
+	std::vector<StaticEntity*>Obstacles;
 
 	int adjMatr[gridsize][gridsize] =
    {9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,
@@ -61,11 +61,11 @@ class Astar :public grid
 	9999,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,9999,
 	9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,
 	};
-	std::vector<sf::Vector2f> freepositions;//store sf::vector2 positions that are not occupied by a banana
+	std::vector<sf::Vector2f> freepositions;//store sf::vector2 positions that are not occupied by a Obstacle
 
 	Astar();
 	~Astar();
-	std::vector<BaseEntity*> GetBananas(grid mygrid);
+	std::vector<BaseEntity*> GetObstacles(grid mygrid);
 	std::vector<tile*> findroute(grid* grid,tile*start, tile* finish);
 	void addtile(sf::Vector2f);
 	void graphicpresentation(std::vector<tile*> tilesvector, sf::RenderWindow& window);

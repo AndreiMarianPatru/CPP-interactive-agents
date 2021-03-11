@@ -1,0 +1,2 @@
+C:\Users\Andrei-Marian\Desktop\repos\CPP-interactive-agents\AutoPac\AIFramework\Debug\Interactive agents.exe
+C:\Users\Andrei-Marian\Desktop\repos\CPP-interactive-agents\Interactive Agents- Visual studio project\Interactive Agents\Debug\Interactive agents.exe
